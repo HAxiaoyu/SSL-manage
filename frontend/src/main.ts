@@ -14,4 +14,8 @@ app.use(createPinia())
 app.use(router)
 app.use(Ant)
 
+// Set global confirm function for Ant Design Modal
+import { Modal } from 'ant-design-vue'
+window.$confirm = Modal.confirm
+
 app.mount('#app')
